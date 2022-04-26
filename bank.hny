@@ -1,0 +1,30 @@
+def Bank(n):
+    result = [ { .balance: 0 }, ] * n
+
+def inquiry(bank, acct):
+    atomically result = (!bank)[acct].balance
+
+def deposit(bank, acct, amount):
+    atomically:
+        (!bank)[acct].balance += amount
+        result = True
+
+def withdraw(bank, acct, amount):
+    atomically:
+        if (!bank)[acct].balance < amount:
+            result = False
+        else:
+            (!bank)[acct].balance -= amount
+            result = True
+
+def transfer(bank, acctFrom, acctTo, amount):
+    if acctFrom == acctTo:
+        result = False
+    else:
+        atomically:
+            if (!bank)[acctFrom].balance < amount:
+                result = False
+            else:
+                (!bank)[acctFrom].balance -= amount
+                (!bank)[acctTo].balance += amount
+                result = True
