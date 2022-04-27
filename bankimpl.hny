@@ -1,0 +1,39 @@
+from synch import *
+
+def Bank(n):
+    result = [ { .balance: 0, .mutex: Lock() }, ] * n
+
+def inquiry(bank, acct):
+    acquire((!bank)[acct].mutex)
+    result = (!bank)[acct].balance
+    release((!bank)[acct].mutex) 
+
+def deposit(bank, acct, amount):
+    acquire((!bank)[acct].mutex)
+    (!bank)[acct].balance += amount
+    result = True
+    release((!bank)[acct].mutex) 
+
+def withdraw(bank, acct, amount):
+    acquire((!bank)[acct].mutex)
+    if (!bank)[acct].balance < amount:
+        result = False
+    else:
+        (!bank)[acct].balance -= amount
+        result = True
+    release((!bank)[acct].mutex) 
+
+def transfer(bank, acctFrom, acctTo, amount):
+    if acctFrom == acctTo:
+        result = False
+    else:
+        acquire((!bank)[min(acctFrom, acctTo)].mutex)
+        acquire((!bank)[max(acctFrom, acctTo)].mutex)
+        if (!bank)[acctFrom].balance < amount:
+            result = False
+        else:
+            (!bank)[acctFrom].balance -= amount
+            (!bank)[acctTo].balance += amount
+            result = True
+        release((!bank)[max(acctFrom, acctTo)].mutex)
+        release((!bank)[min(acctFrom, acctTo)].mutex)
