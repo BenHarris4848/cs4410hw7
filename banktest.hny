@@ -1,0 +1,20 @@
+import bank
+
+b = bank.Bank()
+
+const NINQ = 1
+const NDEP = 2
+const NWIT = 2
+const NTRA = 2
+
+for i in {1..NINQ}:
+    # spawn inq_test(i)
+
+for i in {1..NDEP}:
+    # spawn deposit_test(i)
+
+for i in {1..NINQ}:
+    # spawn withdraw_test(i)
+
+for i in {1..NTRA}:
+    # spawn tranfer_test(i)
