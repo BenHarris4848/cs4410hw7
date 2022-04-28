@@ -8,24 +8,24 @@ const NTRA = 2
 b = bank.Bank(max(max(max(NINQ,NDEP),NWIT),NTRA))
 
 def inq_test(acc):
-    print("call inquiry: ", self)
+    print("call inquiry: ", acc)
     assert bank.inquiry(?b, acc)
-    print("done inquiry: ", self)
+    print("done inquiry: ", acc)
 
 def deposit_test(acc, amount):
-    print("call deposit: ", self)
-    assert bank.inquiry(?b, acc, amount)
-    print("done deposit: ", self)
+    print("call deposit: ", acc)
+    assert bank.deposit(?b, acc, amount)
+    print("done deposit: ", acc)
 
 def withdraw_test(acc, amount):
-    print("call withdraw: ", self)
+    print("call withdraw: ", acc)
     assert bank.withdraw(?b, acc, amount)
-    print("done withdraw: ", self)
+    print("done withdraw: ", acc)
 
 def transfer_test(acctFrom, acctTo, amount):
-    print("call transfer: ", self)
+    print("call transfer: ", acctFrom, acctTo)
     assert bank.transfer(?b, acctFrom, acctTo, amount)
-    print("done transfer: ", self)
+    print("done transfer: ", acctFrom, acctTo)
 
 
 for i in {1..NINQ}:
