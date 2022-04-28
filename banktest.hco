@@ -4,7 +4,7 @@
     {
       "id": "1",
       "tid": "0",
-      "xhash": "2348aba5a77",
+      "xhash": "21bbed59957",
       "name": "__init__()",
       "microsteps": [
         {
@@ -50,13 +50,13 @@
         },
         {
           "npc": "145",
-          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "push": [ { "type": "int", "value": "2" } ],
           "pc": "144"
         },
         {
           "npc": "4",
           "pop": "2",
-          "push": [ { "type": "pc", "value": "146" }, { "type": "int", "value": "2" }, { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "push": [ { "type": "pc", "value": "146" }, { "type": "int", "value": "2" }, { "type": "int", "value": "2" } ],
           "pc": "145"
         },
         {
@@ -73,18 +73,18 @@
             {
               "pc": "5",
               "xpc": "4",
-              "method": "Bank(2, 2)",
+              "method": "Bank(2)",
               "calltype": "normal",
-              "vars": { "n": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] }, "result": { "type": "address", "value": [] } }
+              "vars": { "n": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
             }
           ],
-          "local": { "n": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] }, "result": { "type": "address", "value": [] } },
+          "local": { "n": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
           "push": [ { "type": "dict", "value": [{ "key": { "type": "atom", "value": "result" }, "value": { "type": "address", "value": [] } } ] }, { "type": "int", "value": "4" } ],
           "pc": "4"
         },
         {
           "npc": "6",
-          "local": { "n": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] } },
+          "local": { "n": { "type": "int", "value": "2" } },
           "push": [ ],
           "pc": "5"
         },
@@ -95,7 +95,7 @@
         },
         {
           "npc": "8",
-          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "push": [ { "type": "int", "value": "2" } ],
           "pc": "7"
         },
         {
@@ -105,24 +105,21 @@
           "pc": "8"
         },
         {
-          "npc": "9",
-          "failure": "* can only have at most one list or string",
-          "mode": "failed",
+          "npc": "10",
           "pop": "2",
-          "push": [ ],
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] } ],
           "pc": "9"
-        }
-      ],
-      "invfails": [
-      ],
-      "contexts": [
+        },
         {
-          "tid": "0",
-          "yhash": "2348aba5fb7",
-          "name": "__init__()",
-          "entry": "0",
-          "pc": "9",
-          "fp": "9",
+          "npc": "11",
+          "local": { "result": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] } },
+          "pop": "1",
+          "push": [ ],
+          "pc": "10"
+        },
+        {
+          "npc": "146",
+          "fp": "4",
           "trace": [
             {
               "pc": "146",
@@ -130,17 +127,2606 @@
               "method": "__init__()",
               "calltype": "process",
               "vars": { "result": { "type": "address", "value": [] } }
-            },
-            {
-              "pc": "9",
-              "xpc": "4",
-              "method": "Bank(2, 2)",
-              "calltype": "normal",
-              "vars": { }
             }
           ],
-          "failure": "* can only have at most one list or string",
+          "local": { "result": { "type": "address", "value": [] } },
+          "pop": "5",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] } ],
+          "pc": "11"
+        },
+        {
+          "shared": { "b": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] }, "bank": { "type": "dict", "value": [] } },
+          "npc": "147",
+          "pop": "1",
+          "push": [ ],
+          "pc": "146"
+        },
+        {
+          "npc": "305",
+          "push": [ ],
+          "pc": "147"
+        },
+        {
+          "npc": "306",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" } ] } ],
+          "pc": "305"
+        },
+        {
+          "npc": "307",
+          "local": { "$s268": { "type": "set", "value": [{ "type": "int", "value": "1" } ] }, "result": { "type": "address", "value": [] } },
+          "pop": "1",
+          "push": [ ],
+          "pc": "306"
+        },
+        {
+          "npc": "308",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" } ] } ],
+          "pc": "307"
+        },
+        {
+          "npc": "309",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "308"
+        },
+        {
+          "npc": "310",
+          "pop": "1",
+          "push": [ ],
+          "pc": "309"
+        },
+        {
+          "npc": "311",
+          "local": { "$s268": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "310"
+        },
+        {
+          "npc": "312",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" }, { "type": "int", "value": "3" }, { "type": "int", "value": "4" }, { "type": "int", "value": "5" } ] } ],
+          "pc": "311"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bbed5a2e7",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "312",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "312",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s268": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
           "atomic": "1",
+          "mode": "choosing",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "tid": "0",
+      "xhash": "21bbed5a2e7",
+      "name": "__init__()",
+      "microsteps": [
+        {
+          "choose": { "type": "int", "value": "1" },
+          "npc": "313",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "313",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s268": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "$s268": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "atomic": "1",
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" }, { "type": "int", "value": "1" } ],
+          "pc": "312"
+        },
+        {
+          "shared": { "amount": { "type": "int", "value": "1" }, "b": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] }, "bank": { "type": "dict", "value": [] } },
+          "npc": "314",
+          "pop": "1",
+          "push": [ ],
+          "pc": "313"
+        },
+        {
+          "npc": "315",
+          "push": [ { "type": "pc", "value": "148" } ],
+          "pc": "314"
+        },
+        {
+          "npc": "316",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "315"
+        },
+        {
+          "npc": "317",
+          "local": { "$s268": { "type": "set", "value": [] }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "316"
+        },
+        {
+          "npc": "318",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "317"
+        },
+        {
+          "npc": "319",
+          "pop": "3",
+          "push": [ ],
+          "pc": "318"
+        },
+        {
+          "npc": "307",
+          "push": [ ],
+          "pc": "319"
+        },
+        {
+          "npc": "308",
+          "push": [ { "type": "set", "value": [] } ],
+          "pc": "307"
+        },
+        {
+          "npc": "309",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "True" } ],
+          "pc": "308"
+        },
+        {
+          "npc": "320",
+          "pop": "1",
+          "push": [ ],
+          "pc": "309"
+        },
+        {
+          "npc": "321",
+          "local": { "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "320"
+        },
+        {
+          "npc": "322",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] } ],
+          "pc": "321"
+        },
+        {
+          "npc": "323",
+          "local": { "$s282": { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] }, "result": { "type": "address", "value": [] } },
+          "pop": "1",
+          "push": [ ],
+          "pc": "322"
+        },
+        {
+          "npc": "324",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] } ],
+          "pc": "323"
+        },
+        {
+          "npc": "325",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "324"
+        },
+        {
+          "npc": "326",
+          "pop": "1",
+          "push": [ ],
+          "pc": "325"
+        },
+        {
+          "npc": "327",
+          "local": { "$s282": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "326"
+        },
+        {
+          "npc": "328",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" }, { "type": "int", "value": "3" }, { "type": "int", "value": "4" }, { "type": "int", "value": "5" } ] } ],
+          "pc": "327"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bbed59e67",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "328",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "328",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s282": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "atomic": "1",
+          "mode": "choosing",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "tid": "0",
+      "xhash": "21bbed59e67",
+      "name": "__init__()",
+      "microsteps": [
+        {
+          "choose": { "type": "int", "value": "1" },
+          "npc": "329",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "329",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s282": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "$s282": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "atomic": "1",
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" }, { "type": "int", "value": "1" } ],
+          "pc": "328"
+        },
+        {
+          "npc": "330",
+          "pop": "1",
+          "push": [ ],
+          "pc": "329"
+        },
+        {
+          "npc": "331",
+          "push": [ { "type": "pc", "value": "182" } ],
+          "pc": "330"
+        },
+        {
+          "npc": "332",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "331"
+        },
+        {
+          "npc": "333",
+          "push": [ { "type": "int", "value": "0" } ],
+          "pc": "332"
+        },
+        {
+          "npc": "334",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "333"
+        },
+        {
+          "npc": "335",
+          "local": { "$s282": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "334"
+        },
+        {
+          "npc": "336",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "335"
+        },
+        {
+          "npc": "337",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "336"
+        },
+        {
+          "npc": "338",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "337"
+        },
+        {
+          "npc": "339",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "338"
+        },
+        {
+          "npc": "340",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "339"
+        },
+        {
+          "npc": "341",
+          "pop": "3",
+          "push": [ ],
+          "pc": "340"
+        },
+        {
+          "npc": "323",
+          "push": [ ],
+          "pc": "341"
+        },
+        {
+          "npc": "324",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "2" } ] } ],
+          "pc": "323"
+        },
+        {
+          "npc": "325",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "324"
+        },
+        {
+          "npc": "326",
+          "pop": "1",
+          "push": [ ],
+          "pc": "325"
+        },
+        {
+          "npc": "327",
+          "local": { "$s282": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "326"
+        },
+        {
+          "npc": "328",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" }, { "type": "int", "value": "3" }, { "type": "int", "value": "4" }, { "type": "int", "value": "5" } ] } ],
+          "pc": "327"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bbed59f57",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "328",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "328",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s282": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "atomic": "1",
+          "mode": "choosing",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "2",
+          "yhash": "21bbed5a1c7",
+          "name": "deposit_test(1, 1)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "tid": "0",
+      "xhash": "21bbed59f57",
+      "name": "__init__()",
+      "microsteps": [
+        {
+          "choose": { "type": "int", "value": "2" },
+          "npc": "329",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "329",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s282": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "$s282": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "atomic": "1",
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" }, { "type": "int", "value": "2" } ],
+          "pc": "328"
+        },
+        {
+          "shared": { "amount": { "type": "int", "value": "2" }, "b": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] }, "bank": { "type": "dict", "value": [] } },
+          "npc": "330",
+          "pop": "1",
+          "push": [ ],
+          "pc": "329"
+        },
+        {
+          "npc": "331",
+          "push": [ { "type": "pc", "value": "182" } ],
+          "pc": "330"
+        },
+        {
+          "npc": "332",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "331"
+        },
+        {
+          "npc": "333",
+          "push": [ { "type": "int", "value": "0" } ],
+          "pc": "332"
+        },
+        {
+          "npc": "334",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "333"
+        },
+        {
+          "npc": "335",
+          "local": { "$s282": { "type": "set", "value": [] }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "334"
+        },
+        {
+          "npc": "336",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "335"
+        },
+        {
+          "npc": "337",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "336"
+        },
+        {
+          "npc": "338",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "337"
+        },
+        {
+          "npc": "339",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "338"
+        },
+        {
+          "npc": "340",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "339"
+        },
+        {
+          "npc": "341",
+          "pop": "3",
+          "push": [ ],
+          "pc": "340"
+        },
+        {
+          "npc": "323",
+          "push": [ ],
+          "pc": "341"
+        },
+        {
+          "npc": "324",
+          "push": [ { "type": "set", "value": [] } ],
+          "pc": "323"
+        },
+        {
+          "npc": "325",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "True" } ],
+          "pc": "324"
+        },
+        {
+          "npc": "342",
+          "pop": "1",
+          "push": [ ],
+          "pc": "325"
+        },
+        {
+          "npc": "343",
+          "local": { "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "342"
+        },
+        {
+          "npc": "344",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" } ] } ],
+          "pc": "343"
+        },
+        {
+          "npc": "345",
+          "local": { "$s302": { "type": "set", "value": [{ "type": "int", "value": "1" } ] }, "result": { "type": "address", "value": [] } },
+          "pop": "1",
+          "push": [ ],
+          "pc": "344"
+        },
+        {
+          "npc": "346",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" } ] } ],
+          "pc": "345"
+        },
+        {
+          "npc": "347",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "346"
+        },
+        {
+          "npc": "348",
+          "pop": "1",
+          "push": [ ],
+          "pc": "347"
+        },
+        {
+          "npc": "349",
+          "local": { "$s302": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "348"
+        },
+        {
+          "npc": "350",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" }, { "type": "int", "value": "3" }, { "type": "int", "value": "4" }, { "type": "int", "value": "5" } ] } ],
+          "pc": "349"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bbba6d5f7",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "350",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "350",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s302": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "atomic": "1",
+          "mode": "choosing",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "2",
+          "yhash": "21bbed5a1c7",
+          "name": "deposit_test(1, 1)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "3",
+          "yhash": "21bbba6dc67",
+          "name": "deposit_test(2, 2)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "80",
+      "tid": "0",
+      "xhash": "21bbba6d5f7",
+      "name": "__init__()",
+      "microsteps": [
+        {
+          "choose": { "type": "int", "value": "4" },
+          "npc": "351",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "351",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s302": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "$s302": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "atomic": "1",
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" }, { "type": "int", "value": "4" } ],
+          "pc": "350"
+        },
+        {
+          "shared": { "amount": { "type": "int", "value": "4" }, "b": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] }, "bank": { "type": "dict", "value": [] } },
+          "npc": "352",
+          "pop": "1",
+          "push": [ ],
+          "pc": "351"
+        },
+        {
+          "npc": "353",
+          "push": [ { "type": "pc", "value": "220" } ],
+          "pc": "352"
+        },
+        {
+          "npc": "354",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "353"
+        },
+        {
+          "npc": "355",
+          "push": [ { "type": "int", "value": "0" } ],
+          "pc": "354"
+        },
+        {
+          "npc": "356",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "355"
+        },
+        {
+          "npc": "357",
+          "local": { "$s302": { "type": "set", "value": [] }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "356"
+        },
+        {
+          "npc": "358",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "357"
+        },
+        {
+          "npc": "359",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "358"
+        },
+        {
+          "npc": "360",
+          "push": [ { "type": "int", "value": "4" } ],
+          "pc": "359"
+        },
+        {
+          "npc": "361",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "4" } } ] } ],
+          "pc": "360"
+        },
+        {
+          "npc": "362",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "361"
+        },
+        {
+          "npc": "363",
+          "pop": "3",
+          "push": [ ],
+          "pc": "362"
+        },
+        {
+          "npc": "345",
+          "push": [ ],
+          "pc": "363"
+        },
+        {
+          "npc": "346",
+          "push": [ { "type": "set", "value": [] } ],
+          "pc": "345"
+        },
+        {
+          "npc": "347",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "True" } ],
+          "pc": "346"
+        },
+        {
+          "npc": "364",
+          "pop": "1",
+          "push": [ ],
+          "pc": "347"
+        },
+        {
+          "npc": "365",
+          "local": { "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "364"
+        },
+        {
+          "npc": "366",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] } ],
+          "pc": "365"
+        },
+        {
+          "npc": "367",
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] }, "result": { "type": "address", "value": [] } },
+          "pop": "1",
+          "push": [ ],
+          "pc": "366"
+        },
+        {
+          "npc": "368",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] } ],
+          "pc": "367"
+        },
+        {
+          "npc": "369",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "368"
+        },
+        {
+          "npc": "370",
+          "pop": "1",
+          "push": [ ],
+          "pc": "369"
+        },
+        {
+          "npc": "371",
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "370"
+        },
+        {
+          "npc": "372",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] } ],
+          "pc": "371"
+        },
+        {
+          "npc": "373",
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "pop": "1",
+          "push": [ ],
+          "pc": "372"
+        },
+        {
+          "npc": "374",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] } ],
+          "pc": "373"
+        },
+        {
+          "npc": "375",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "374"
+        },
+        {
+          "npc": "376",
+          "pop": "1",
+          "push": [ ],
+          "pc": "375"
+        },
+        {
+          "npc": "377",
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "j": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "376"
+        },
+        {
+          "npc": "378",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" }, { "type": "int", "value": "3" }, { "type": "int", "value": "4" }, { "type": "int", "value": "5" } ] } ],
+          "pc": "377"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bbed5ac77",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "378",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "378",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "j": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "atomic": "1",
+          "mode": "choosing",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "2",
+          "yhash": "21bbed5a1c7",
+          "name": "deposit_test(1, 1)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "3",
+          "yhash": "21bbba6dc67",
+          "name": "deposit_test(2, 2)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "4",
+          "yhash": "21bbed5ae27",
+          "name": "withdraw_test(1, 4)",
+          "entry": "220",
+          "pc": "220",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "495",
+      "tid": "0",
+      "xhash": "21bbed5ac77",
+      "name": "__init__()",
+      "microsteps": [
+        {
+          "choose": { "type": "int", "value": "4" },
+          "npc": "379",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "379",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "j": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "j": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "atomic": "1",
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" }, { "type": "int", "value": "4" } ],
+          "pc": "378"
+        },
+        {
+          "npc": "380",
+          "pop": "1",
+          "push": [ ],
+          "pc": "379"
+        },
+        {
+          "npc": "381",
+          "push": [ { "type": "pc", "value": "258" } ],
+          "pc": "380"
+        },
+        {
+          "npc": "382",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "381"
+        },
+        {
+          "npc": "383",
+          "push": [ { "type": "int", "value": "0" } ],
+          "pc": "382"
+        },
+        {
+          "npc": "384",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "383"
+        },
+        {
+          "npc": "385",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "384"
+        },
+        {
+          "npc": "386",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "385"
+        },
+        {
+          "npc": "387",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "386"
+        },
+        {
+          "npc": "388",
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "387"
+        },
+        {
+          "npc": "389",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "388"
+        },
+        {
+          "npc": "390",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "389"
+        },
+        {
+          "npc": "391",
+          "push": [ { "type": "int", "value": "4" } ],
+          "pc": "390"
+        },
+        {
+          "npc": "392",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "1" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "4" } } ] } ],
+          "pc": "391"
+        },
+        {
+          "npc": "393",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "392"
+        },
+        {
+          "npc": "394",
+          "pop": "3",
+          "push": [ ],
+          "pc": "393"
+        },
+        {
+          "npc": "373",
+          "push": [ ],
+          "pc": "394"
+        },
+        {
+          "npc": "374",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "2" } ] } ],
+          "pc": "373"
+        },
+        {
+          "npc": "375",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "374"
+        },
+        {
+          "npc": "376",
+          "pop": "1",
+          "push": [ ],
+          "pc": "375"
+        },
+        {
+          "npc": "377",
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "j": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "376"
+        },
+        {
+          "npc": "378",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" }, { "type": "int", "value": "3" }, { "type": "int", "value": "4" }, { "type": "int", "value": "5" } ] } ],
+          "pc": "377"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bbeed2937",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "378",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "378",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "j": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "atomic": "1",
+          "mode": "choosing",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "2",
+          "yhash": "21bbed5a1c7",
+          "name": "deposit_test(1, 1)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "3",
+          "yhash": "21bbba6dc67",
+          "name": "deposit_test(2, 2)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "4",
+          "yhash": "21bbed5ae27",
+          "name": "withdraw_test(1, 4)",
+          "entry": "220",
+          "pc": "220",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "5",
+          "yhash": "21bbeed96c7",
+          "name": "transfer_test(1, 1, 4)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "1776",
+      "tid": "0",
+      "xhash": "21bbeed2937",
+      "name": "__init__()",
+      "microsteps": [
+        {
+          "choose": { "type": "int", "value": "5" },
+          "npc": "379",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "379",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "j": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "j": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "atomic": "1",
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" }, { "type": "int", "value": "5" } ],
+          "pc": "378"
+        },
+        {
+          "shared": { "amount": { "type": "int", "value": "5" }, "b": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] }, "bank": { "type": "dict", "value": [] } },
+          "npc": "380",
+          "pop": "1",
+          "push": [ ],
+          "pc": "379"
+        },
+        {
+          "npc": "381",
+          "push": [ { "type": "pc", "value": "258" } ],
+          "pc": "380"
+        },
+        {
+          "npc": "382",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "381"
+        },
+        {
+          "npc": "383",
+          "push": [ { "type": "int", "value": "0" } ],
+          "pc": "382"
+        },
+        {
+          "npc": "384",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "383"
+        },
+        {
+          "npc": "385",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "384"
+        },
+        {
+          "npc": "386",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "385"
+        },
+        {
+          "npc": "387",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "386"
+        },
+        {
+          "npc": "388",
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "387"
+        },
+        {
+          "npc": "389",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "388"
+        },
+        {
+          "npc": "390",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "389"
+        },
+        {
+          "npc": "391",
+          "push": [ { "type": "int", "value": "5" } ],
+          "pc": "390"
+        },
+        {
+          "npc": "392",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "1" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "5" } } ] } ],
+          "pc": "391"
+        },
+        {
+          "npc": "393",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "392"
+        },
+        {
+          "npc": "394",
+          "pop": "3",
+          "push": [ ],
+          "pc": "393"
+        },
+        {
+          "npc": "373",
+          "push": [ ],
+          "pc": "394"
+        },
+        {
+          "npc": "374",
+          "push": [ { "type": "set", "value": [] } ],
+          "pc": "373"
+        },
+        {
+          "npc": "375",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "True" } ],
+          "pc": "374"
+        },
+        {
+          "npc": "395",
+          "pop": "1",
+          "push": [ ],
+          "pc": "375"
+        },
+        {
+          "npc": "396",
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "395"
+        },
+        {
+          "npc": "397",
+          "local": { "$s322": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "396"
+        },
+        {
+          "npc": "367",
+          "push": [ ],
+          "pc": "397"
+        },
+        {
+          "npc": "368",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "2" } ] } ],
+          "pc": "367"
+        },
+        {
+          "npc": "369",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "368"
+        },
+        {
+          "npc": "370",
+          "pop": "1",
+          "push": [ ],
+          "pc": "369"
+        },
+        {
+          "npc": "371",
+          "local": { "$s322": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "370"
+        },
+        {
+          "npc": "372",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] } ],
+          "pc": "371"
+        },
+        {
+          "npc": "373",
+          "local": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "pop": "1",
+          "push": [ ],
+          "pc": "372"
+        },
+        {
+          "npc": "374",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" } ] } ],
+          "pc": "373"
+        },
+        {
+          "npc": "375",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "374"
+        },
+        {
+          "npc": "376",
+          "pop": "1",
+          "push": [ ],
+          "pc": "375"
+        },
+        {
+          "npc": "377",
+          "local": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "2" }, "j": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "376"
+        },
+        {
+          "npc": "378",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" }, { "type": "int", "value": "3" }, { "type": "int", "value": "4" }, { "type": "int", "value": "5" } ] } ],
+          "pc": "377"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bbef7db27",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "378",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "378",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "2" }, "j": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "atomic": "1",
+          "mode": "choosing",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "2",
+          "yhash": "21bbed5a1c7",
+          "name": "deposit_test(1, 1)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "3",
+          "yhash": "21bbba6dc67",
+          "name": "deposit_test(2, 2)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "4",
+          "yhash": "21bbed5ae27",
+          "name": "withdraw_test(1, 4)",
+          "entry": "220",
+          "pc": "220",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "5",
+          "yhash": "21bbeed96c7",
+          "name": "transfer_test(1, 1, 4)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "6",
+          "yhash": "21bbef3b807",
+          "name": "transfer_test(1, 2, 5)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "8429",
+      "tid": "0",
+      "xhash": "21bbef7db27",
+      "name": "__init__()",
+      "microsteps": [
+        {
+          "choose": { "type": "int", "value": "3" },
+          "npc": "379",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "379",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "2" }, "j": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "2" }, "j": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "atomic": "1",
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" }, { "type": "int", "value": "3" } ],
+          "pc": "378"
+        },
+        {
+          "shared": { "amount": { "type": "int", "value": "3" }, "b": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] }, "bank": { "type": "dict", "value": [] } },
+          "npc": "380",
+          "pop": "1",
+          "push": [ ],
+          "pc": "379"
+        },
+        {
+          "npc": "381",
+          "push": [ { "type": "pc", "value": "258" } ],
+          "pc": "380"
+        },
+        {
+          "npc": "382",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "381"
+        },
+        {
+          "npc": "383",
+          "push": [ { "type": "int", "value": "0" } ],
+          "pc": "382"
+        },
+        {
+          "npc": "384",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "383"
+        },
+        {
+          "npc": "385",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "384"
+        },
+        {
+          "npc": "386",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "385"
+        },
+        {
+          "npc": "387",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "386"
+        },
+        {
+          "npc": "388",
+          "local": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [{ "type": "int", "value": "2" } ] }, "i": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "387"
+        },
+        {
+          "npc": "389",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "388"
+        },
+        {
+          "npc": "390",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "389"
+        },
+        {
+          "npc": "391",
+          "push": [ { "type": "int", "value": "3" } ],
+          "pc": "390"
+        },
+        {
+          "npc": "392",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "1" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "3" } } ] } ],
+          "pc": "391"
+        },
+        {
+          "npc": "393",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "392"
+        },
+        {
+          "npc": "394",
+          "pop": "3",
+          "push": [ ],
+          "pc": "393"
+        },
+        {
+          "npc": "373",
+          "push": [ ],
+          "pc": "394"
+        },
+        {
+          "npc": "374",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "2" } ] } ],
+          "pc": "373"
+        },
+        {
+          "npc": "375",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "374"
+        },
+        {
+          "npc": "376",
+          "pop": "1",
+          "push": [ ],
+          "pc": "375"
+        },
+        {
+          "npc": "377",
+          "local": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "j": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "376"
+        },
+        {
+          "npc": "378",
+          "push": [ { "type": "set", "value": [{ "type": "int", "value": "1" }, { "type": "int", "value": "2" }, { "type": "int", "value": "3" }, { "type": "int", "value": "4" }, { "type": "int", "value": "5" } ] } ],
+          "pc": "377"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bbf4a19c7",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "378",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "378",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "j": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "atomic": "1",
+          "mode": "choosing",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "2",
+          "yhash": "21bbed5a1c7",
+          "name": "deposit_test(1, 1)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "3",
+          "yhash": "21bbba6dc67",
+          "name": "deposit_test(2, 2)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "4",
+          "yhash": "21bbed5ae27",
+          "name": "withdraw_test(1, 4)",
+          "entry": "220",
+          "pc": "220",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "5",
+          "yhash": "21bbeed96c7",
+          "name": "transfer_test(1, 1, 4)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "6",
+          "yhash": "21bbef3b807",
+          "name": "transfer_test(1, 2, 5)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "7",
+          "yhash": "21bbf3092f7",
+          "name": "transfer_test(2, 1, 3)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "41887",
+      "tid": "0",
+      "xhash": "21bbf4a19c7",
+      "name": "__init__()",
+      "microsteps": [
+        {
+          "choose": { "type": "int", "value": "1" },
+          "npc": "379",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "379",
+              "xpc": "0",
+              "method": "__init__()",
+              "calltype": "process",
+              "vars": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "j": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "j": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "atomic": "1",
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" }, { "type": "int", "value": "1" } ],
+          "pc": "378"
+        },
+        {
+          "shared": { "amount": { "type": "int", "value": "1" }, "b": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "dict", "value": [{ "key": { "type": "atom", "value": "balance" }, "value": { "type": "int", "value": "0" } } ] } } ] }, "bank": { "type": "dict", "value": [] } },
+          "npc": "380",
+          "pop": "1",
+          "push": [ ],
+          "pc": "379"
+        },
+        {
+          "npc": "381",
+          "push": [ { "type": "pc", "value": "258" } ],
+          "pc": "380"
+        },
+        {
+          "npc": "382",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "381"
+        },
+        {
+          "npc": "383",
+          "push": [ { "type": "int", "value": "0" } ],
+          "pc": "382"
+        },
+        {
+          "npc": "384",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "383"
+        },
+        {
+          "npc": "385",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "384"
+        },
+        {
+          "npc": "386",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "385"
+        },
+        {
+          "npc": "387",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "386"
+        },
+        {
+          "npc": "388",
+          "local": { "$s322": { "type": "set", "value": [] }, "$s328": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "387"
+        },
+        {
+          "npc": "389",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "388"
+        },
+        {
+          "npc": "390",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "389"
+        },
+        {
+          "npc": "391",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "390"
+        },
+        {
+          "npc": "392",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "391"
+        },
+        {
+          "npc": "393",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "392"
+        },
+        {
+          "npc": "394",
+          "pop": "3",
+          "push": [ ],
+          "pc": "393"
+        },
+        {
+          "npc": "373",
+          "push": [ ],
+          "pc": "394"
+        },
+        {
+          "npc": "374",
+          "push": [ { "type": "set", "value": [] } ],
+          "pc": "373"
+        },
+        {
+          "npc": "375",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "True" } ],
+          "pc": "374"
+        },
+        {
+          "npc": "395",
+          "pop": "1",
+          "push": [ ],
+          "pc": "375"
+        },
+        {
+          "npc": "396",
+          "local": { "$s322": { "type": "set", "value": [] }, "i": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "395"
+        },
+        {
+          "npc": "397",
+          "local": { "$s322": { "type": "set", "value": [] }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "396"
+        },
+        {
+          "npc": "367",
+          "push": [ ],
+          "pc": "397"
+        },
+        {
+          "npc": "368",
+          "push": [ { "type": "set", "value": [] } ],
+          "pc": "367"
+        },
+        {
+          "npc": "369",
+          "pop": "1",
+          "push": [ { "type": "bool", "value": "True" } ],
+          "pc": "368"
+        },
+        {
+          "npc": "398",
+          "pop": "1",
+          "push": [ ],
+          "pc": "369"
+        },
+        {
+          "npc": "399",
+          "local": { "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "398"
+        },
+        {
+          "npc": "399",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "local": { },
+          "mode": "terminated",
+          "pop": "4",
+          "push": [ ],
+          "pc": "399"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bc0354d17",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "399",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "atomic": "1",
+          "mode": "terminated",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "2",
+          "yhash": "21bbed5a1c7",
+          "name": "deposit_test(1, 1)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "3",
+          "yhash": "21bbba6dc67",
+          "name": "deposit_test(2, 2)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "4",
+          "yhash": "21bbed5ae27",
+          "name": "withdraw_test(1, 4)",
+          "entry": "220",
+          "pc": "220",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "5",
+          "yhash": "21bbeed96c7",
+          "name": "transfer_test(1, 1, 4)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "6",
+          "yhash": "21bbef3b807",
+          "name": "transfer_test(1, 2, 5)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "7",
+          "yhash": "21bbf3092f7",
+          "name": "transfer_test(2, 1, 3)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "8",
+          "yhash": "21bc0354f87",
+          "name": "transfer_test(2, 2, 1)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "475533",
+      "tid": "8",
+      "xhash": "21bc0354f87",
+      "name": "transfer_test(2, 2, 1)",
+      "microsteps": [
+        {
+          "npc": "259",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "259",
+              "xpc": "258",
+              "method": "transfer_test(2, 2, 1)",
+              "calltype": "process",
+              "vars": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "amount": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "amount": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "1" } } ] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" } ],
+          "pc": "258"
+        },
+        {
+          "npc": "260",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "259"
+        },
+        {
+          "npc": "261",
+          "push": [ { "type": "int", "value": "0" } ],
+          "pc": "260"
+        },
+        {
+          "npc": "262",
+          "push": [ { "type": "atom", "value": "call transfer: " } ],
+          "pc": "261"
+        },
+        {
+          "npc": "263",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "atom", "value": "call transfer: " } } ] } ],
+          "pc": "262"
+        },
+        {
+          "npc": "264",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "263"
+        },
+        {
+          "npc": "265",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "264"
+        },
+        {
+          "npc": "266",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "atom", "value": "call transfer: " } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "265"
+        },
+        {
+          "npc": "267",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "266"
+        },
+        {
+          "npc": "268",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "267"
+        },
+        {
+          "npc": "269",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "atom", "value": "call transfer: " } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "268"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bc0354d17",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "399",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "atomic": "1",
+          "mode": "terminated",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "2",
+          "yhash": "21bbed5a1c7",
+          "name": "deposit_test(1, 1)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "3",
+          "yhash": "21bbba6dc67",
+          "name": "deposit_test(2, 2)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "4",
+          "yhash": "21bbed5ae27",
+          "name": "withdraw_test(1, 4)",
+          "entry": "220",
+          "pc": "220",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "5",
+          "yhash": "21bbeed96c7",
+          "name": "transfer_test(1, 1, 4)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "6",
+          "yhash": "21bbef3b807",
+          "name": "transfer_test(1, 2, 5)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "7",
+          "yhash": "21bbf3092f7",
+          "name": "transfer_test(2, 1, 3)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "8",
+          "yhash": "21bc7022147",
+          "name": "transfer_test(2, 2, 1)",
+          "entry": "258",
+          "pc": "269",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "269",
+              "xpc": "258",
+              "method": "transfer_test(2, 2, 1)",
+              "calltype": "process",
+              "vars": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "amount": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        }
+      ]
+    },
+    {
+      "id": "1191412",
+      "tid": "8",
+      "xhash": "21bc7022147",
+      "name": "transfer_test(2, 2, 1)",
+      "microsteps": [
+        {
+          "print": { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "atom", "value": "call transfer: " } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "2" } } ] },
+          "npc": "270",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "270",
+              "xpc": "258",
+              "method": "transfer_test(2, 2, 1)",
+              "calltype": "process",
+              "vars": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "amount": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "this": { "type": "dict", "value": [] },
+          "local": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "amount": { "type": "int", "value": "1" }, "result": { "type": "address", "value": [] } },
+          "push": [ { "type": "int", "value": "1" }, { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "1" } } ] }, { "type": "dict", "value": [] }, { "type": "int", "value": "0" } ],
+          "pc": "269"
+        },
+        {
+          "npc": "271",
+          "readonly": "1",
+          "push": [ ],
+          "pc": "270"
+        },
+        {
+          "npc": "272",
+          "atomic": "1",
+          "push": [ ],
+          "pc": "271"
+        },
+        {
+          "npc": "273",
+          "push": [ { "type": "pc", "value": "85" } ],
+          "pc": "272"
+        },
+        {
+          "npc": "274",
+          "push": [ { "type": "dict", "value": [] } ],
+          "pc": "273"
+        },
+        {
+          "npc": "275",
+          "push": [ { "type": "int", "value": "0" } ],
+          "pc": "274"
+        },
+        {
+          "npc": "276",
+          "push": [ { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } ],
+          "pc": "275"
+        },
+        {
+          "npc": "277",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } } ] } ],
+          "pc": "276"
+        },
+        {
+          "npc": "278",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "277"
+        },
+        {
+          "npc": "279",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "278"
+        },
+        {
+          "npc": "280",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "279"
+        },
+        {
+          "npc": "281",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "280"
+        },
+        {
+          "npc": "282",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "281"
+        },
+        {
+          "npc": "283",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "2" } } ] } ],
+          "pc": "282"
+        },
+        {
+          "npc": "284",
+          "push": [ { "type": "int", "value": "3" } ],
+          "pc": "283"
+        },
+        {
+          "npc": "285",
+          "push": [ { "type": "int", "value": "1" } ],
+          "pc": "284"
+        },
+        {
+          "npc": "286",
+          "local": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "push": [ ],
+          "pc": "285"
+        },
+        {
+          "npc": "287",
+          "pop": "3",
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "3" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "286"
+        },
+        {
+          "npc": "85",
+          "pop": "2",
+          "push": [ { "type": "pc", "value": "288" }, { "type": "int", "value": "2" }, { "type": "dict", "value": [{ "key": { "type": "int", "value": "0" }, "value": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } }, { "key": { "type": "int", "value": "1" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "2" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "int", "value": "3" }, "value": { "type": "int", "value": "1" } } ] } ],
+          "pc": "287"
+        },
+        {
+          "npc": "86",
+          "fp": "9",
+          "trace": [
+            {
+              "pc": "288",
+              "xpc": "258",
+              "method": "transfer_test(2, 2, 1)",
+              "calltype": "process",
+              "vars": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
+            },
+            {
+              "pc": "86",
+              "xpc": "85",
+              "method": "transfer(?b, 2, 2, 1)",
+              "calltype": "normal",
+              "vars": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "amount": { "type": "int", "value": "1" }, "bank": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "local": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "amount": { "type": "int", "value": "1" }, "bank": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] }, "result": { "type": "address", "value": [] } },
+          "push": [ { "type": "dict", "value": [{ "key": { "type": "atom", "value": "acctFrom" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "atom", "value": "acctTo" }, "value": { "type": "int", "value": "2" } }, { "key": { "type": "atom", "value": "result" }, "value": { "type": "address", "value": [] } } ] }, { "type": "int", "value": "4" } ],
+          "pc": "85"
+        },
+        {
+          "npc": "87",
+          "local": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "amount": { "type": "int", "value": "1" }, "bank": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } },
+          "push": [ ],
+          "pc": "86"
+        },
+        {
+          "npc": "88",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "87"
+        },
+        {
+          "npc": "89",
+          "push": [ { "type": "int", "value": "2" } ],
+          "pc": "88"
+        },
+        {
+          "npc": "90",
+          "pop": "2",
+          "push": [ { "type": "bool", "value": "True" } ],
+          "pc": "89"
+        },
+        {
+          "npc": "91",
+          "pop": "1",
+          "push": [ ],
+          "pc": "90"
+        },
+        {
+          "npc": "92",
+          "local": { "acctTo": { "type": "int", "value": "2" }, "amount": { "type": "int", "value": "1" }, "bank": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } },
+          "push": [ ],
+          "pc": "91"
+        },
+        {
+          "npc": "93",
+          "local": { "amount": { "type": "int", "value": "1" }, "bank": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } },
+          "push": [ ],
+          "pc": "92"
+        },
+        {
+          "npc": "94",
+          "local": { "bank": { "type": "address", "value": [{ "type": "atom", "value": "b" } ] } },
+          "push": [ ],
+          "pc": "93"
+        },
+        {
+          "npc": "95",
+          "local": { },
+          "push": [ ],
+          "pc": "94"
+        },
+        {
+          "npc": "96",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "95"
+        },
+        {
+          "npc": "97",
+          "local": { "result": { "type": "bool", "value": "False" } },
+          "pop": "1",
+          "push": [ ],
+          "pc": "96"
+        },
+        {
+          "npc": "142",
+          "push": [ ],
+          "pc": "97"
+        },
+        {
+          "npc": "288",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "288",
+              "xpc": "258",
+              "method": "transfer_test(2, 2, 1)",
+              "calltype": "process",
+              "vars": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "local": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } },
+          "pop": "5",
+          "push": [ { "type": "bool", "value": "False" } ],
+          "pc": "142"
+        },
+        {
+          "npc": "288",
+          "failure": "Harmony assertion failed",
+          "mode": "failed",
+          "pop": "1",
+          "push": [ ],
+          "pc": "288"
+        }
+      ],
+      "invfails": [
+      ],
+      "contexts": [
+        {
+          "tid": "0",
+          "yhash": "21bc0354d17",
+          "name": "__init__()",
+          "entry": "0",
+          "pc": "399",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "atomic": "1",
+          "mode": "terminated",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "1",
+          "yhash": "21bbed59bf7",
+          "name": "inq_test(1)",
+          "entry": "148",
+          "pc": "148",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "2",
+          "yhash": "21bbed5a1c7",
+          "name": "deposit_test(1, 1)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "3",
+          "yhash": "21bbba6dc67",
+          "name": "deposit_test(2, 2)",
+          "entry": "182",
+          "pc": "182",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "4",
+          "yhash": "21bbed5ae27",
+          "name": "withdraw_test(1, 4)",
+          "entry": "220",
+          "pc": "220",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "5",
+          "yhash": "21bbeed96c7",
+          "name": "transfer_test(1, 1, 4)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "6",
+          "yhash": "21bbef3b807",
+          "name": "transfer_test(1, 2, 5)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "7",
+          "yhash": "21bbf3092f7",
+          "name": "transfer_test(2, 1, 3)",
+          "entry": "258",
+          "pc": "258",
+          "fp": "0",
+          "trace": [
+
+          ],
+          "mode": "runnable",
+          "this": { "type": "dict", "value": [] }
+        },
+        {
+          "tid": "8",
+          "yhash": "21baf4e8807",
+          "name": "transfer_test(2, 2, 1)",
+          "entry": "258",
+          "pc": "288",
+          "fp": "4",
+          "trace": [
+            {
+              "pc": "288",
+              "xpc": "258",
+              "method": "transfer_test(2, 2, 1)",
+              "calltype": "process",
+              "vars": { "acctFrom": { "type": "int", "value": "2" }, "acctTo": { "type": "int", "value": "2" }, "result": { "type": "address", "value": [] } }
+            }
+          ],
+          "failure": "Harmony assertion failed",
+          "atomic": "1",
+          "readonly": "1",
           "mode": "failed",
           "this": { "type": "dict", "value": [] }
         }
@@ -292,17 +2878,17 @@
     "AtomicDec",
     "Return",
     "Push PC(4)",
-    "Push [2, 2]",
+    "Push 2",
     "Apply",
     "Store b",
-    "Jump 299",
+    "Jump 305",
     "Frame inq_test acc",
     "Push ()",
     "Push 0",
     "Push \"call inquiry: \"",
     "3-ary DictAdd",
     "Push 1",
-    "Load self",
+    "LoadVar acc",
     "3-ary DictAdd",
     "Print",
     "ReadonlyInc",
@@ -314,7 +2900,6 @@
     "3-ary DictAdd",
     "Push 1",
     "LoadVar acc",
-    "DelVar acc",
     "3-ary DictAdd",
     "Apply",
     "Assert",
@@ -325,30 +2910,30 @@
     "Push \"done inquiry: \"",
     "3-ary DictAdd",
     "Push 1",
-    "Load self",
+    "LoadVar acc",
+    "DelVar acc",
     "3-ary DictAdd",
     "Print",
     "Return",
-    "Jump 299",
+    "Jump 305",
     "Frame deposit_test (acc, amount)",
     "Push ()",
     "Push 0",
     "Push \"call deposit: \"",
     "3-ary DictAdd",
     "Push 1",
-    "Load self",
+    "LoadVar acc",
     "3-ary DictAdd",
     "Print",
     "ReadonlyInc",
     "AtomicInc(lazy)",
-    "Push PC(13)",
+    "Push PC(28)",
     "Push ()",
     "Push 0",
     "Push ?b",
     "3-ary DictAdd",
     "Push 1",
     "LoadVar acc",
-    "DelVar acc",
     "3-ary DictAdd",
     "Push 2",
     "LoadVar amount",
@@ -363,18 +2948,19 @@
     "Push \"done deposit: \"",
     "3-ary DictAdd",
     "Push 1",
-    "Load self",
+    "LoadVar acc",
+    "DelVar acc",
     "3-ary DictAdd",
     "Print",
     "Return",
-    "Jump 299",
+    "Jump 305",
     "Frame withdraw_test (acc, amount)",
     "Push ()",
     "Push 0",
     "Push \"call withdraw: \"",
     "3-ary DictAdd",
     "Push 1",
-    "Load self",
+    "LoadVar acc",
     "3-ary DictAdd",
     "Print",
     "ReadonlyInc",
@@ -386,7 +2972,6 @@
     "3-ary DictAdd",
     "Push 1",
     "LoadVar acc",
-    "DelVar acc",
     "3-ary DictAdd",
     "Push 2",
     "LoadVar amount",
@@ -401,18 +2986,22 @@
     "Push \"done withdraw: \"",
     "3-ary DictAdd",
     "Push 1",
-    "Load self",
+    "LoadVar acc",
+    "DelVar acc",
     "3-ary DictAdd",
     "Print",
     "Return",
-    "Jump 299",
+    "Jump 305",
     "Frame transfer_test (acctFrom, acctTo, amount)",
     "Push ()",
     "Push 0",
     "Push \"call transfer: \"",
     "3-ary DictAdd",
     "Push 1",
-    "Load self",
+    "LoadVar acctFrom",
+    "3-ary DictAdd",
+    "Push 2",
+    "LoadVar acctTo",
     "3-ary DictAdd",
     "Print",
     "ReadonlyInc",
@@ -424,11 +3013,9 @@
     "3-ary DictAdd",
     "Push 1",
     "LoadVar acctFrom",
-    "DelVar acctFrom",
     "3-ary DictAdd",
     "Push 2",
     "LoadVar acctTo",
-    "DelVar acctTo",
     "3-ary DictAdd",
     "Push 3",
     "LoadVar amount",
@@ -443,16 +3030,21 @@
     "Push \"done transfer: \"",
     "3-ary DictAdd",
     "Push 1",
-    "Load self",
+    "LoadVar acctFrom",
+    "DelVar acctFrom",
+    "3-ary DictAdd",
+    "Push 2",
+    "LoadVar acctTo",
+    "DelVar acctTo",
     "3-ary DictAdd",
     "Print",
     "Return",
     "Push { 1 }",
-    "StoreVar $s262",
-    "LoadVar $s262",
+    "StoreVar $s268",
+    "LoadVar $s268",
     "1-ary IsEmpty",
-    "JumpCond True 314",
-    "Cut($s262, i)",
+    "JumpCond True 320",
+    "Cut($s268, i)",
     "Push { 1, 2, 3, 4, 5 }",
     "Choose",
     "Store amount",
@@ -461,14 +3053,14 @@
     "DelVar i",
     "Push ()",
     "Spawn",
-    "Jump 301",
-    "DelVar $s262",
+    "Jump 307",
+    "DelVar $s268",
     "Push { 1, 2 }",
-    "StoreVar $s276",
-    "LoadVar $s276",
+    "StoreVar $s282",
+    "LoadVar $s282",
     "1-ary IsEmpty",
-    "JumpCond True 336",
-    "Cut($s276, i)",
+    "JumpCond True 342",
+    "Cut($s282, i)",
     "Push { 1, 2, 3, 4, 5 }",
     "Choose",
     "Store amount",
@@ -483,14 +3075,14 @@
     "3-ary DictAdd",
     "Push ()",
     "Spawn",
-    "Jump 317",
-    "DelVar $s276",
+    "Jump 323",
+    "DelVar $s282",
     "Push { 1 }",
-    "StoreVar $s296",
-    "LoadVar $s296",
+    "StoreVar $s302",
+    "LoadVar $s302",
     "1-ary IsEmpty",
-    "JumpCond True 358",
-    "Cut($s296, i)",
+    "JumpCond True 364",
+    "Cut($s302, i)",
     "Push { 1, 2, 3, 4, 5 }",
     "Choose",
     "Store amount",
@@ -505,20 +3097,20 @@
     "3-ary DictAdd",
     "Push ()",
     "Spawn",
-    "Jump 339",
-    "DelVar $s296",
-    "Push { 1, 2 }",
-    "StoreVar $s316",
-    "LoadVar $s316",
-    "1-ary IsEmpty",
-    "JumpCond True 392",
-    "Cut($s316, i)",
+    "Jump 345",
+    "DelVar $s302",
     "Push { 1, 2 }",
     "StoreVar $s322",
     "LoadVar $s322",
     "1-ary IsEmpty",
-    "JumpCond True 389",
-    "Cut($s322, j)",
+    "JumpCond True 398",
+    "Cut($s322, i)",
+    "Push { 1, 2 }",
+    "StoreVar $s328",
+    "LoadVar $s328",
+    "1-ary IsEmpty",
+    "JumpCond True 395",
+    "Cut($s328, j)",
     "Push { 1, 2, 3, 4, 5 }",
     "Choose",
     "Store amount",
@@ -536,11 +3128,11 @@
     "3-ary DictAdd",
     "Push ()",
     "Spawn",
+    "Jump 373",
+    "DelVar $s328",
+    "DelVar i",
     "Jump 367",
     "DelVar $s322",
-    "DelVar i",
-    "Jump 361",
-    "DelVar $s316",
     "Return",
     "DelVar result"
   ],
@@ -689,17 +3281,17 @@
     "decrement atomic counter of context",
     "restore caller method state and push result",
     "push constant PC(4)",
-    "push constant [2, 2]",
+    "push constant 2",
     "pop a pc or dictionary f and an index i and push f(i)",
     "pop a value and store it in shared variable b",
-    "set program counter to 299",
+    "set program counter to 305",
     "start of method inq_test",
     "push constant ()",
     "push constant 0",
     "push constant \"call inquiry: \"",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
-    "push value of shared variable self",
+    "push the value of acc",
     "pop 3 values and push the result of applying DictAdd",
     "pop a value and add to print history",
     "increment readonly counter of context; thread cannot mutate shared variables if > 0",
@@ -711,7 +3303,6 @@
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
     "push the value of acc",
-    "delete method variable acc",
     "pop 3 values and push the result of applying DictAdd",
     "pop a pc or dictionary f and an index i and push f(i)",
     "pop a condition and raise exception if condition is false",
@@ -722,30 +3313,30 @@
     "push constant \"done inquiry: \"",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
-    "push value of shared variable self",
+    "push the value of acc",
+    "delete method variable acc",
     "pop 3 values and push the result of applying DictAdd",
     "pop a value and add to print history",
     "restore caller method state and push result",
-    "set program counter to 299",
+    "set program counter to 305",
     "start of method deposit_test",
     "push constant ()",
     "push constant 0",
     "push constant \"call deposit: \"",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
-    "push value of shared variable self",
+    "push the value of acc",
     "pop 3 values and push the result of applying DictAdd",
     "pop a value and add to print history",
     "increment readonly counter of context; thread cannot mutate shared variables if > 0",
     "increment atomic counter of context; thread runs uninterrupted if larger than 0",
-    "push constant PC(13)",
+    "push constant PC(28)",
     "push constant ()",
     "push constant 0",
     "push constant ?b",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
     "push the value of acc",
-    "delete method variable acc",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 2",
     "push the value of amount",
@@ -760,18 +3351,19 @@
     "push constant \"done deposit: \"",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
-    "push value of shared variable self",
+    "push the value of acc",
+    "delete method variable acc",
     "pop 3 values and push the result of applying DictAdd",
     "pop a value and add to print history",
     "restore caller method state and push result",
-    "set program counter to 299",
+    "set program counter to 305",
     "start of method withdraw_test",
     "push constant ()",
     "push constant 0",
     "push constant \"call withdraw: \"",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
-    "push value of shared variable self",
+    "push the value of acc",
     "pop 3 values and push the result of applying DictAdd",
     "pop a value and add to print history",
     "increment readonly counter of context; thread cannot mutate shared variables if > 0",
@@ -783,7 +3375,6 @@
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
     "push the value of acc",
-    "delete method variable acc",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 2",
     "push the value of amount",
@@ -798,18 +3389,22 @@
     "push constant \"done withdraw: \"",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
-    "push value of shared variable self",
+    "push the value of acc",
+    "delete method variable acc",
     "pop 3 values and push the result of applying DictAdd",
     "pop a value and add to print history",
     "restore caller method state and push result",
-    "set program counter to 299",
+    "set program counter to 305",
     "start of method transfer_test",
     "push constant ()",
     "push constant 0",
     "push constant \"call transfer: \"",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
-    "push value of shared variable self",
+    "push the value of acctFrom",
+    "pop 3 values and push the result of applying DictAdd",
+    "push constant 2",
+    "push the value of acctTo",
     "pop 3 values and push the result of applying DictAdd",
     "pop a value and add to print history",
     "increment readonly counter of context; thread cannot mutate shared variables if > 0",
@@ -821,11 +3416,9 @@
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
     "push the value of acctFrom",
-    "delete method variable acctFrom",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 2",
     "push the value of acctTo",
-    "delete method variable acctTo",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 3",
     "push the value of amount",
@@ -840,16 +3433,21 @@
     "push constant \"done transfer: \"",
     "pop 3 values and push the result of applying DictAdd",
     "push constant 1",
-    "push value of shared variable self",
+    "push the value of acctFrom",
+    "delete method variable acctFrom",
+    "pop 3 values and push the result of applying DictAdd",
+    "push constant 2",
+    "push the value of acctTo",
+    "delete method variable acctTo",
     "pop 3 values and push the result of applying DictAdd",
     "pop a value and add to print history",
     "restore caller method state and push result",
     "push constant { 1 }",
-    "pop a value and store in $s262",
-    "push the value of $s262",
+    "pop a value and store in $s268",
+    "push the value of $s268",
     "pop 1 value and push the result of applying IsEmpty",
-    "pop a value and jump to 314 if the value is True",
-    "remove smallest element from $s262 and assign to i",
+    "pop a value and jump to 320 if the value is True",
+    "remove smallest element from $s268 and assign to i",
     "push constant { 1, 2, 3, 4, 5 }",
     "pop a set value and push one of its elements",
     "pop a value and store it in shared variable amount",
@@ -858,14 +3456,14 @@
     "delete method variable i",
     "push constant ()",
     "pop thread-local state, argument, and pc and spawn a new thread",
-    "set program counter to 301",
-    "delete method variable $s262",
+    "set program counter to 307",
+    "delete method variable $s268",
     "push constant { 1, 2 }",
-    "pop a value and store in $s276",
-    "push the value of $s276",
+    "pop a value and store in $s282",
+    "push the value of $s282",
     "pop 1 value and push the result of applying IsEmpty",
-    "pop a value and jump to 336 if the value is True",
-    "remove smallest element from $s276 and assign to i",
+    "pop a value and jump to 342 if the value is True",
+    "remove smallest element from $s282 and assign to i",
     "push constant { 1, 2, 3, 4, 5 }",
     "pop a set value and push one of its elements",
     "pop a value and store it in shared variable amount",
@@ -880,14 +3478,14 @@
     "pop 3 values and push the result of applying DictAdd",
     "push constant ()",
     "pop thread-local state, argument, and pc and spawn a new thread",
-    "set program counter to 317",
-    "delete method variable $s276",
+    "set program counter to 323",
+    "delete method variable $s282",
     "push constant { 1 }",
-    "pop a value and store in $s296",
-    "push the value of $s296",
+    "pop a value and store in $s302",
+    "push the value of $s302",
     "pop 1 value and push the result of applying IsEmpty",
-    "pop a value and jump to 358 if the value is True",
-    "remove smallest element from $s296 and assign to i",
+    "pop a value and jump to 364 if the value is True",
+    "remove smallest element from $s302 and assign to i",
     "push constant { 1, 2, 3, 4, 5 }",
     "pop a set value and push one of its elements",
     "pop a value and store it in shared variable amount",
@@ -902,20 +3500,20 @@
     "pop 3 values and push the result of applying DictAdd",
     "push constant ()",
     "pop thread-local state, argument, and pc and spawn a new thread",
-    "set program counter to 339",
-    "delete method variable $s296",
-    "push constant { 1, 2 }",
-    "pop a value and store in $s316",
-    "push the value of $s316",
-    "pop 1 value and push the result of applying IsEmpty",
-    "pop a value and jump to 392 if the value is True",
-    "remove smallest element from $s316 and assign to i",
+    "set program counter to 345",
+    "delete method variable $s302",
     "push constant { 1, 2 }",
     "pop a value and store in $s322",
     "push the value of $s322",
     "pop 1 value and push the result of applying IsEmpty",
-    "pop a value and jump to 389 if the value is True",
-    "remove smallest element from $s322 and assign to j",
+    "pop a value and jump to 398 if the value is True",
+    "remove smallest element from $s322 and assign to i",
+    "push constant { 1, 2 }",
+    "pop a value and store in $s328",
+    "push the value of $s328",
+    "pop 1 value and push the result of applying IsEmpty",
+    "pop a value and jump to 395 if the value is True",
+    "remove smallest element from $s328 and assign to j",
     "push constant { 1, 2, 3, 4, 5 }",
     "pop a set value and push one of its elements",
     "pop a value and store it in shared variable amount",
@@ -933,177 +3531,179 @@
     "pop 3 values and push the result of applying DictAdd",
     "push constant ()",
     "pop thread-local state, argument, and pc and spawn a new thread",
+    "set program counter to 373",
+    "delete method variable $s328",
+    "delete method variable i",
     "set program counter to 367",
     "delete method variable $s322",
-    "delete method variable i",
-    "set program counter to 361",
-    "delete method variable $s316",
     "restore caller method state and push result",
     "delete method variable result"
   ],
   "locations": {
+    "398": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
     "115": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
-    "209": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
-    "193": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "209": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
+    "193": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "72": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
-    "143": { "file": "banktest.hny", "line": "8", "code": "b = bank.Bank((max(max(NINQ,NDEP),NWIT),NTRA))" },
-    "307": { "file": "banktest.hny", "line": "32", "code": "    amount = choose {1..5}" },
-    "263": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", self)" },
+    "143": { "file": "banktest.hny", "line": "8", "code": "b = bank.Bank(max(max(max(NINQ,NDEP),NWIT),NTRA))" },
+    "307": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
+    "263": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
     "43": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
     "50": { "file": "bank.hny", "line": "13", "code": "    atomically:" },
-    "259": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", self)" },
-    "188": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", self)" },
+    "259": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
+    "188": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", acc)" },
     "357": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
     "354": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
-    "338": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
-    "348": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
-    "304": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
+    "338": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
+    "348": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
+    "304": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
     "62": { "file": "bank.hny", "line": "15", "code": "            result = False" },
     "42": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
     "128": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
     "114": { "file": "bank.hny", "line": "26", "code": "                result = False" },
-    "178": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", self)" },
-    "208": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "178": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
+    "208": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "258": { "file": "banktest.hny", "line": "25", "code": "def transfer_test(acctFrom, acctTo, amount):" },
     "51": { "file": "bank.hny", "line": "13", "code": "    atomically:" },
     "3": { "file": "bank.hny", "line": "1", "code": "def Bank(n):" },
     "12": { "file": "bank.hny", "line": "4", "code": "def inquiry(bank, acct):" },
     "56": { "file": "bank.hny", "line": "14", "code": "        if (!bank)[acct].balance < amount:" },
     "71": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
-    "361": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
+    "361": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
     "9": { "file": "bank.hny", "line": "2", "code": "    result = [ { .balance: 0 }, ] * n" },
+    "400": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
     "119": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
     "111": { "file": "bank.hny", "line": "26", "code": "                result = False" },
     "41": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
-    "264": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", self)" },
-    "369": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
-    "366": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
+    "264": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
+    "369": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
+    "366": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
     "8": { "file": "bank.hny", "line": "2", "code": "    result = [ { .balance: 0 }, ] * n" },
-    "266": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", self)" },
+    "266": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
     "61": { "file": "bank.hny", "line": "15", "code": "            result = False" },
     "13": { "file": "bank.hny", "line": "4", "code": "def inquiry(bank, acct):" },
-    "267": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
-    "265": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", self)" },
+    "267": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
+    "265": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
     "384": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
     "229": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
     "163": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
-    "363": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
-    "374": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "261": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", self)" },
-    "324": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
+    "363": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
+    "374": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
+    "261": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
+    "324": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
     "112": { "file": "bank.hny", "line": "26", "code": "                result = False" },
-    "327": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
+    "327": { "file": "banktest.hny", "line": "36", "code": "    amount = choose {1..5}" },
     "52": { "file": "bank.hny", "line": "14", "code": "        if (!bank)[acct].balance < amount:" },
     "63": { "file": "bank.hny", "line": "15", "code": "            result = False" },
-    "360": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
+    "360": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
     "73": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
     "11": { "file": "bank.hny", "line": "2", "code": "    result = [ { .balance: 0 }, ] * n" },
-    "377": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
+    "377": { "file": "banktest.hny", "line": "45", "code": "        amount = choose {1..5}" },
     "40": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
     "158": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "53": { "file": "bank.hny", "line": "14", "code": "        if (!bank)[acct].balance < amount:" },
     "387": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "228": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", self)" },
-    "262": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", self)" },
+    "228": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", acc)" },
+    "262": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
     "10": { "file": "bank.hny", "line": "2", "code": "    result = [ { .balance: 0 }, ] * n" },
     "278": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "110": { "file": "bank.hny", "line": "26", "code": "                result = False" },
     "288": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "70": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
     "116": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
-    "318": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
-    "375": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "362": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
+    "318": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
+    "375": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
+    "362": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
     "289": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "279": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
-    "325": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
+    "325": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
     "60": { "file": "bank.hny", "line": "14", "code": "        if (!bank)[acct].balance < amount:" },
     "385": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "260": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", self)" },
+    "260": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
     "108": { "file": "bank.hny", "line": "26", "code": "                result = False" },
     "117": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
-    "343": { "file": "banktest.hny", "line": "40", "code": "    amount = choose {1..5}" },
-    "194": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "343": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
+    "194": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "67": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
     "20": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "286": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
-    "376": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "268": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
+    "376": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
+    "268": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
     "109": { "file": "bank.hny", "line": "26", "code": "                result = False" },
-    "227": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", self)" },
+    "227": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", acc)" },
     "126": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
-    "226": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", self)" },
+    "226": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", acc)" },
     "235": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
     "287": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "4": { "file": "bank.hny", "line": "1", "code": "def Bank(n):" },
-    "295": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", self)" },
+    "295": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
     "134": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
-    "292": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", self)" },
-    "371": { "file": "banktest.hny", "line": "45", "code": "        amount = choose {1..5}" },
+    "292": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
+    "371": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
     "30": { "file": "bank.hny", "line": "8", "code": "    atomically:" },
-    "201": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
-    "186": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", self)" },
+    "201": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
+    "186": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", acc)" },
     "7": { "file": "bank.hny", "line": "2", "code": "    result = [ { .balance: 0 }, ] * n" },
     "342": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
-    "340": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
+    "340": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
     "127": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
-    "180": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", self)" },
-    "224": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", self)" },
-    "187": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", self)" },
+    "180": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
+    "224": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", acc)" },
+    "187": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", acc)" },
     "232": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "195": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
-    "200": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "195": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
+    "200": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "113": { "file": "bank.hny", "line": "26", "code": "                result = False" },
     "120": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
     "6": { "file": "bank.hny", "line": "2", "code": "    result = [ { .balance: 0 }, ] * n" },
     "233": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "293": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", self)" },
-    "370": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
-    "368": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
-    "211": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", self)" },
+    "293": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
+    "370": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
+    "368": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
+    "211": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
     "85": { "file": "bank.hny", "line": "20", "code": "def transfer(bank, acctFrom, acctTo, amount):" },
     "135": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
     "181": { "file": "banktest.hny", "line": "15", "code": "def deposit_test(acc, amount):" },
     "234": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "341": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
+    "341": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
     "47": { "file": "bank.hny", "line": "10", "code": "        result = True" },
-    "269": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
+    "269": { "file": "banktest.hny", "line": "26", "code": "    print(\"call transfer: \", acctFrom, acctTo)" },
     "17": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "139": { "file": "bank.hny", "line": "30", "code": "                result = True" },
     "77": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
-    "346": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
+    "346": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
     "237": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "294": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", self)" },
+    "294": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
     "22": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
-    "297": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", self)" },
-    "296": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", self)" },
-    "359": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
+    "297": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
+    "296": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
+    "359": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
     "236": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
     "32": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
-    "199": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "199": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "122": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
-    "350": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
+    "350": { "file": "banktest.hny", "line": "40", "code": "    amount = choose {1..5}" },
     "15": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "137": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
-    "205": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "205": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "103": { "file": "bank.hny", "line": "25", "code": "            if (!bank)[acctFrom].balance < amount:" },
     "39": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
-    "197": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
-    "218": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", self)" },
-    "291": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", self)" },
+    "197": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
+    "218": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
+    "291": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
     "29": { "file": "bank.hny", "line": "8", "code": "    atomically:" },
     "182": { "file": "banktest.hny", "line": "15", "code": "def deposit_test(acc, amount):" },
     "82": { "file": "bank.hny", "line": "18", "code": "            result = True" },
     "353": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
-    "190": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", self)" },
+    "190": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", acc)" },
     "231": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "378": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
+    "378": { "file": "banktest.hny", "line": "45", "code": "        amount = choose {1..5}" },
     "121": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
     "92": { "file": "bank.hny", "line": "22", "code": "        result = False" },
-    "290": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", self)" },
+    "290": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "130": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
     "230": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "196": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "196": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "57": { "file": "bank.hny", "line": "14", "code": "        if (!bank)[acct].balance < amount:" },
     "219": { "file": "banktest.hny", "line": "20", "code": "def withdraw_test(acc, amount):" },
     "136": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
@@ -1111,128 +3711,130 @@
     "129": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
     "131": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
     "99": { "file": "bank.hny", "line": "25", "code": "            if (!bank)[acctFrom].balance < amount:" },
-    "207": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "207": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "355": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
-    "191": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "191": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "5": { "file": "bank.hny", "line": "2", "code": "    result = [ { .balance: 0 }, ] * n" },
-    "202": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "202": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "75": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
     "125": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
-    "203": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
-    "189": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", self)" },
-    "185": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", self)" },
+    "203": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
+    "189": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", acc)" },
+    "185": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", acc)" },
     "65": { "file": "bank.hny", "line": "15", "code": "            result = False" },
-    "206": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
-    "184": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", self)" },
-    "192": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
-    "349": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
+    "206": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
+    "184": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", acc)" },
+    "192": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
+    "349": { "file": "banktest.hny", "line": "40", "code": "    amount = choose {1..5}" },
     "132": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
     "55": { "file": "bank.hny", "line": "14", "code": "        if (!bank)[acct].balance < amount:" },
     "356": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
     "45": { "file": "bank.hny", "line": "10", "code": "        result = True" },
-    "351": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
-    "204": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "351": { "file": "banktest.hny", "line": "40", "code": "    amount = choose {1..5}" },
+    "204": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "124": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
     "133": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
     "89": { "file": "bank.hny", "line": "21", "code": "    if acctFrom == acctTo:" },
-    "150": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", self)" },
-    "214": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", self)" },
+    "150": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", acc)" },
+    "214": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
     "18": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "100": { "file": "bank.hny", "line": "25", "code": "            if (!bank)[acctFrom].balance < amount:" },
     "69": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
     "96": { "file": "bank.hny", "line": "22", "code": "        result = False" },
     "81": { "file": "bank.hny", "line": "18", "code": "            result = True" },
     "79": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
-    "217": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", self)" },
+    "217": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
     "25": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "91": { "file": "bank.hny", "line": "22", "code": "        result = False" },
     "169": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "164": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "35": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
-    "379": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
+    "379": { "file": "banktest.hny", "line": "45", "code": "        amount = choose {1..5}" },
     "220": { "file": "banktest.hny", "line": "20", "code": "def withdraw_test(acc, amount):" },
     "49": { "file": "bank.hny", "line": "12", "code": "def withdraw(bank, acct, amount):" },
-    "248": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", self)" },
+    "248": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
     "106": { "file": "bank.hny", "line": "25", "code": "            if (!bank)[acctFrom].balance < amount:" },
     "389": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "298": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", self)" },
+    "298": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
     "270": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
-    "216": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", self)" },
-    "329": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
+    "216": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
+    "329": { "file": "banktest.hny", "line": "36", "code": "    amount = choose {1..5}" },
     "78": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
-    "152": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", self)" },
+    "152": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", acc)" },
     "102": { "file": "bank.hny", "line": "25", "code": "            if (!bank)[acctFrom].balance < amount:" },
-    "345": { "file": "banktest.hny", "line": "40", "code": "    amount = choose {1..5}" },
-    "156": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", self)" },
-    "316": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
-    "312": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
+    "395": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
+    "345": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
+    "156": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", acc)" },
+    "316": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
+    "312": { "file": "banktest.hny", "line": "32", "code": "    amount = choose {1..5}" },
     "68": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
     "280": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "238": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "173": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", self)" },
+    "173": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
     "107": { "file": "bank.hny", "line": "25", "code": "            if (!bank)[acctFrom].balance < amount:" },
     "80": { "file": "bank.hny", "line": "18", "code": "            result = True" },
     "157": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "123": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
-    "151": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", self)" },
+    "151": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", acc)" },
     "335": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
-    "249": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", self)" },
-    "215": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", self)" },
-    "183": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", self)" },
-    "311": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
+    "249": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
+    "215": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
+    "183": { "file": "banktest.hny", "line": "16", "code": "    print(\"call deposit: \", acc)" },
+    "311": { "file": "banktest.hny", "line": "32", "code": "    amount = choose {1..5}" },
     "239": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "213": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", self)" },
+    "213": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
     "281": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "394": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "347": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
-    "313": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
-    "308": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
+    "347": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
+    "313": { "file": "banktest.hny", "line": "32", "code": "    amount = choose {1..5}" },
+    "308": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
     "271": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "34": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
-    "358": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
-    "344": { "file": "banktest.hny", "line": "40", "code": "    amount = choose {1..5}" },
-    "337": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
+    "358": { "file": "banktest.hny", "line": "41", "code": "    spawn withdraw_test(i, amount)" },
+    "344": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
+    "337": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
     "101": { "file": "bank.hny", "line": "25", "code": "            if (!bank)[acctFrom].balance < amount:" },
     "24": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "19": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "334": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
-    "221": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", self)" },
+    "221": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", acc)" },
     "90": { "file": "bank.hny", "line": "21", "code": "    if acctFrom == acctTo:" },
     "165": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
-    "310": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
-    "212": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", self)" },
+    "397": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
+    "310": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
+    "212": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
     "48": { "file": "bank.hny", "line": "12", "code": "def withdraw(bank, acct, amount):" },
     "138": { "file": "bank.hny", "line": "29", "code": "                (!bank)[acctTo].balance += amount" },
     "272": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "282": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
-    "322": { "file": "banktest.hny", "line": "36", "code": "    amount = choose {1..5}" },
+    "322": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
     "166": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "148": { "file": "banktest.hny", "line": "10", "code": "def inq_test(acc):" },
     "27": { "file": "bank.hny", "line": "7", "code": "def deposit(bank, acct, amount):" },
-    "222": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", self)" },
-    "198": { "file": "banktest.hny", "line": "17", "code": "    assert bank.inquiry(?b, acc, amount)" },
+    "222": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", acc)" },
+    "198": { "file": "banktest.hny", "line": "17", "code": "    assert bank.deposit(?b, acc, amount)" },
     "382": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
     "84": { "file": "bank.hny", "line": "20", "code": "def transfer(bank, acctFrom, acctTo, amount):" },
-    "210": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", self)" },
-    "299": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
-    "372": { "file": "banktest.hny", "line": "45", "code": "        amount = choose {1..5}" },
+    "210": { "file": "banktest.hny", "line": "18", "code": "    print(\"done deposit: \", acc)" },
+    "299": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
+    "372": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
     "95": { "file": "bank.hny", "line": "22", "code": "        result = False" },
     "37": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
     "26": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "285": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
-    "223": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", self)" },
-    "323": { "file": "banktest.hny", "line": "36", "code": "    amount = choose {1..5}" },
+    "223": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", acc)" },
+    "323": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
     "273": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
-    "373": { "file": "banktest.hny", "line": "45", "code": "        amount = choose {1..5}" },
+    "373": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
     "105": { "file": "bank.hny", "line": "25", "code": "            if (!bank)[acctFrom].balance < amount:" },
     "283": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "383": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "155": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", self)" },
-    "154": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", self)" },
+    "155": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", acc)" },
+    "154": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", acc)" },
     "94": { "file": "bank.hny", "line": "22", "code": "        result = False" },
     "104": { "file": "bank.hny", "line": "25", "code": "            if (!bank)[acctFrom].balance < amount:" },
     "380": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "225": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", self)" },
+    "225": { "file": "banktest.hny", "line": "21", "code": "    print(\"call withdraw: \", acc)" },
     "59": { "file": "bank.hny", "line": "14", "code": "        if (!bank)[acct].balance < amount:" },
     "275": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
     "284": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
@@ -1245,18 +3847,18 @@
     "21": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "386": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
     "393": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "326": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
+    "326": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
     "159": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
-    "250": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", self)" },
+    "250": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
     "16": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
     "276": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
-    "176": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", self)" },
-    "319": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
+    "176": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
+    "319": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
     "245": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "144": { "file": "banktest.hny", "line": "8", "code": "b = bank.Bank((max(max(NINQ,NDEP),NWIT),NTRA))" },
+    "144": { "file": "banktest.hny", "line": "8", "code": "b = bank.Bank(max(max(max(NINQ,NDEP),NWIT),NTRA))" },
     "277": { "file": "banktest.hny", "line": "27", "code": "    assert bank.transfer(?b, acctFrom, acctTo, amount)" },
-    "365": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
-    "251": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", self)" },
+    "365": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
+    "251": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
     "390": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
     "381": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
     "242": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
@@ -1265,19 +3867,19 @@
     "64": { "file": "bank.hny", "line": "15", "code": "            result = False" },
     "332": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
     "44": { "file": "bank.hny", "line": "10", "code": "        result = True" },
-    "145": { "file": "banktest.hny", "line": "8", "code": "b = bank.Bank((max(max(NINQ,NDEP),NWIT),NTRA))" },
-    "177": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", self)" },
+    "145": { "file": "banktest.hny", "line": "8", "code": "b = bank.Bank(max(max(max(NINQ,NDEP),NWIT),NTRA))" },
+    "177": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
     "161": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "392": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
     "162": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "170": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "333": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
     "74": { "file": "bank.hny", "line": "17", "code": "            (!bank)[acct].balance -= amount" },
-    "321": { "file": "banktest.hny", "line": "36", "code": "    amount = choose {1..5}" },
+    "321": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
     "243": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
     "320": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
     "391": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "367": { "file": "banktest.hny", "line": "44", "code": "    for j in {1..NTRA}:" },
+    "367": { "file": "banktest.hny", "line": "43", "code": "for i in {1..NTRA}:" },
     "33": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
     "244": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
     "66": { "file": "bank.hny", "line": "15", "code": "            result = False" },
@@ -1288,51 +3890,53 @@
     "160": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "118": { "file": "bank.hny", "line": "28", "code": "                (!bank)[acctFrom].balance -= amount" },
     "23": { "file": "bank.hny", "line": "5", "code": "    atomically result = (!bank)[acct].balance" },
-    "149": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", self)" },
+    "149": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", acc)" },
+    "396": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
     "58": { "file": "bank.hny", "line": "14", "code": "        if (!bank)[acct].balance < amount:" },
-    "309": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
-    "247": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
+    "309": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
+    "247": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
     "246": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
     "46": { "file": "bank.hny", "line": "10", "code": "        result = True" },
-    "314": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
+    "314": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
     "147": { "file": "banktest.hny", "line": "10", "code": "def inq_test(acc):" },
-    "300": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
-    "336": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
-    "303": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
+    "300": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
+    "336": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
+    "303": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
     "93": { "file": "bank.hny", "line": "22", "code": "        result = False" },
     "140": { "file": "bank.hny", "line": "30", "code": "                result = True" },
     "241": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "172": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", self)" },
-    "153": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", self)" },
+    "172": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
+    "153": { "file": "banktest.hny", "line": "11", "code": "    print(\"call inquiry: \", acc)" },
     "240": { "file": "banktest.hny", "line": "22", "code": "    assert bank.withdraw(?b, acc, amount)" },
-    "317": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
+    "317": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
     "388": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
-    "315": { "file": "banktest.hny", "line": "35", "code": "for i in {1..NDEP}:" },
-    "171": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
+    "315": { "file": "banktest.hny", "line": "33", "code": "    spawn inq_test(i)" },
+    "171": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
     "28": { "file": "bank.hny", "line": "7", "code": "def deposit(bank, acct, amount):" },
     "168": { "file": "banktest.hny", "line": "12", "code": "    assert bank.inquiry(?b, acc)" },
     "83": { "file": "bank.hny", "line": "18", "code": "            result = True" },
-    "146": { "file": "banktest.hny", "line": "8", "code": "b = bank.Bank((max(max(NINQ,NDEP),NWIT),NTRA))" },
-    "328": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
-    "305": { "file": "banktest.hny", "line": "32", "code": "    amount = choose {1..5}" },
+    "146": { "file": "banktest.hny", "line": "8", "code": "b = bank.Bank(max(max(max(NINQ,NDEP),NWIT),NTRA))" },
+    "328": { "file": "banktest.hny", "line": "36", "code": "    amount = choose {1..5}" },
+    "305": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
     "88": { "file": "bank.hny", "line": "21", "code": "    if acctFrom == acctTo:" },
     "141": { "file": "bank.hny", "line": "30", "code": "                result = True" },
-    "302": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
+    "302": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
     "38": { "file": "bank.hny", "line": "9", "code": "        (!bank)[acct].balance += amount" },
     "257": { "file": "banktest.hny", "line": "25", "code": "def transfer_test(acctFrom, acctTo, amount):" },
-    "339": { "file": "banktest.hny", "line": "39", "code": "for i in {1..NINQ}:" },
-    "252": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", self)" },
-    "175": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", self)" },
-    "253": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", self)" },
-    "256": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", self)" },
-    "179": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", self)" },
+    "339": { "file": "banktest.hny", "line": "37", "code": "    spawn deposit_test(i, amount)" },
+    "252": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
+    "175": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
+    "253": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
+    "256": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
+    "179": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
     "54": { "file": "bank.hny", "line": "14", "code": "        if (!bank)[acct].balance < amount:" },
     "98": { "file": "bank.hny", "line": "24", "code": "        atomically:" },
-    "174": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", self)" },
+    "174": { "file": "banktest.hny", "line": "13", "code": "    print(\"done inquiry: \", acc)" },
     "142": { "file": "bank.hny", "line": "30", "code": "                result = True" },
-    "301": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" },
-    "255": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", self)" },
-    "254": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", self)" },
-    "306": { "file": "banktest.hny", "line": "32", "code": "    amount = choose {1..5}" }
+    "399": { "file": "banktest.hny", "line": "46", "code": "        spawn transfer_test(i, j, amount)" },
+    "301": { "file": "banktest.hny", "line": "28", "code": "    print(\"done transfer: \", acctFrom, acctTo)" },
+    "255": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
+    "254": { "file": "banktest.hny", "line": "23", "code": "    print(\"done withdraw: \", acc)" },
+    "306": { "file": "banktest.hny", "line": "31", "code": "for i in {1..NINQ}:" }
   }
 }
