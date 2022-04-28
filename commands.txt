@@ -1,0 +1,2 @@
+harmony -o bank.hfa banktest.hny
+harmony -B bank.hfa -m bank=bankimpl banktest.hny
