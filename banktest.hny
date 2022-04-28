@@ -1,11 +1,12 @@
 import bank
 
-b = bank.Bank()
-
 const NINQ = 1
 const NDEP = 2
 const NWIT = 2
 const NTRA = 2
+
+b = bank.Bank((max(max(NINQ,NDEP),NWIT),NTRA))
+
 
 for i in {1..NINQ}:
     # spawn inq_test(i)
