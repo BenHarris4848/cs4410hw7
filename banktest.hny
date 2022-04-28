@@ -5,7 +5,7 @@ const NDEP = 2
 const NWIT = 2
 const NTRA = 2
 
-b = bank.Bank((max(max(NINQ,NDEP),NWIT),NTRA))
+b = bank.Bank(max(max(max(NINQ,NDEP),NWIT),NTRA))
 
 def inq_test(acc):
     print("call inquiry: ", self)
