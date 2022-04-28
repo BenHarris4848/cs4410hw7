@@ -7,14 +7,39 @@ const NDEP = 2
 const NWIT = 2
 const NTRA = 2
 
+def inq_test(acc):
+    print("call inquiry: ", self)
+    assert bank.inquiry(?b, acc)
+    print("done inquiry: ", self)
+
+def deposit_test(acc, amount):
+    print("call deposit: ", self)
+    assert bank.inquiry(?b, acc, amount)
+    print("done deposit: ", self)
+
+def withdraw_test(acc, amount):
+    print("call withdraw: ", self)
+    assert bank.withdraw(?b, acc, amount)
+    print("done withdraw: ", self)
+
+def transfer_test(acctFrom, acctTo, amount):
+    print("call transfer: ", self)
+    assert bank.transfer(?b, acctFrom, acctTo, amount)
+    print("done transfer: ", self)
+
 for i in {1..NINQ}:
-    # spawn inq_test(i)
+    amount = choose {1..5}
+    spawn inq_test(i)
 
 for i in {1..NDEP}:
-    # spawn deposit_test(i)
+    amount = choose {1..5}
+    spawn deposit_test(i, amount)
 
 for i in {1..NINQ}:
-    # spawn withdraw_test(i)
+    amount = choose {1..5}
+    spawn withdraw_test(i, amount)
 
 for i in {1..NTRA}:
-    # spawn tranfer_test(i)
+    for j in {1..NTRA}:
+        amount = choose {1..5}
+        spawn transfer_test(i, j, amount)
