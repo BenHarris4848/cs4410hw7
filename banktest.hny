@@ -9,22 +9,22 @@ b = bank.Bank(max(max(max(NINQ,NDEP),NWIT),NTRA))
 
 def inq_test(acc):
     print("call inquiry: ", acc)
-    assert bank.inquiry(?b, acc)
+    assert (bank.inquiry(?b, acc) | !bank.inquiry(?b, acc))
     print("done inquiry: ", acc)
 
 def deposit_test(acc, amount):
     print("call deposit: ", acc)
-    assert bank.deposit(?b, acc, amount)
+    assert (bank.deposit(?b, acc, amount) | !bank.deposit(?b, acc, amount))
     print("done deposit: ", acc)
 
 def withdraw_test(acc, amount):
     print("call withdraw: ", acc)
-    assert bank.withdraw(?b, acc, amount)
+    assert (bank.withdraw(?b, acc, amount) | !bank.withdraw(?b, acc, amount))
     print("done withdraw: ", acc)
 
 def transfer_test(acctFrom, acctTo, amount):
     print("call transfer: ", acctFrom, acctTo)
-    assert bank.transfer(?b, acctFrom, acctTo, amount)
+    assert (bank.transfer(?b, acctFrom, acctTo, amount) | !bank.transfer(?b, acctFrom, acctTo, amount))
     print("done transfer: ", acctFrom, acctTo)
 
 
